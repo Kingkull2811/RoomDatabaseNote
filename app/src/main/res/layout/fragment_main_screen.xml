@@ -37,18 +37,33 @@
                 android:textSize="15sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:padding="10dp"
+            android:background="@drawable/custom_spinner"
+            android:id="@+id/spinnerPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:entries="@array/listPriority"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="@id/layoutSearch"
+            app:layout_constraintTop_toBottomOf="@id/layoutSearch" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:foregroundGravity="center"
+            android:textDirection="inherit"
+            android:textAlignment="center"
+            android:pointerIcon="arrow"
             android:id="@+id/listNote"
             android:layout_margin="10dp"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layoutSearch"
-            android:layout_width="match_parent"
             android:layout_height="0dp"
-             />
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/spinnerPriority" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             app:rippleColor="@color/colorYellowOpacity"
             app:borderWidth="0dp"
@@ -60,7 +75,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             app:rippleColor="@color/colorYellowOpacity"
             android:src="@drawable/ic_delete"
@@ -72,7 +88,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/fltAdd"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

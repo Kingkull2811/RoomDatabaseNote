@@ -6,4 +6,9 @@
     <string name="high_priority">High Priority</string>
     <string name="normal_priority">Normal Priority</string>
     <string name="low_priority">Low Priority</string>
+    <string-array name="listPriority">
+        <item>New</item>
+        <item>Low To High</item>
+        <item>High To Low</item>
+    </string-array>
 </resources>
