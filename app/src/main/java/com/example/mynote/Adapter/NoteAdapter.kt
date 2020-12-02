@@ -14,9 +14,9 @@ import com.example.mynote.Room.Note
 import kotlinx.android.synthetic.main.row_layout.view.*
 
 
-class NoteAdapter(context: Context, list: List<Note>):
+class NoteAdapter(context: Context):
     RecyclerView.Adapter<NoteAdapter.MyViewHolder>() {
-    var list:ArrayList<Note> = list as ArrayList<Note>
+    private var list = emptyList<Note>()
     var context:Context = context
     private var lastPosition = -1
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteAdapter.MyViewHolder {
@@ -61,4 +61,10 @@ class NoteAdapter(context: Context, list: List<Note>):
         }
         return -1;
     }
+
+    fun setData(list:List<Note>){
+        this.list = list
+        notifyDataSetChanged()
+    }
+
 }

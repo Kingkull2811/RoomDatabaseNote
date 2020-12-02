@@ -51,6 +51,7 @@
              />
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             app:rippleColor="@color/colorYellowOpacity"
+            app:borderWidth="0dp"
             android:src="@drawable/ic_add"
             android:id="@+id/fltAdd"
             app:fabSize="normal"
@@ -58,6 +59,18 @@
             android:layout_margin="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:rippleColor="@color/colorYellowOpacity"
+            android:src="@drawable/ic_delete"
+            android:id="@+id/fltDeleteAll"
+            app:fabSize="normal"
+            android:backgroundTint="@color/white"
+            app:borderWidth="0dp"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fltAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
