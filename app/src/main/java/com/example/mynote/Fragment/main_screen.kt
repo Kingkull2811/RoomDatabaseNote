@@ -6,21 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import android.widget.GridLayout
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.mynote.Adapter.NoteAdapter
 import com.example.mynote.R
 import com.example.mynote.Room.Note
+import com.example.mynote.Room.NoteViewModel
 import kotlinx.android.synthetic.main.fragment_main_screen.view.*
-import kotlinx.android.synthetic.main.fragment_splash_screen.view.*
 
 
 class main_screen : Fragment() {
     lateinit var adapter: NoteAdapter
     private var list:ArrayList<Note>?=null
+    lateinit var noteViewModel:NoteViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -58,5 +56,6 @@ class main_screen : Fragment() {
         view?.listNote?.layoutManager = layout
         view?.listNote?.adapter = adapter
     }
+
 
 }

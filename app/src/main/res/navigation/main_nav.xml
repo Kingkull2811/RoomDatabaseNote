@@ -26,7 +26,8 @@
             android:id="@+id/action_main_screen_to_edit_note"
             app:destination="@id/edit_note"
             app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right" />
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/main_screen" />
     </fragment>
     <fragment
         android:id="@+id/edit_note"

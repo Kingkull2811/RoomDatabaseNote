@@ -63,6 +63,7 @@
                 android:text="@string/normal_priority" />
 
             <com.google.android.material.chip.Chip
+                android:checked="true"
                 android:id="@+id/chipLow"
                 style="@style/customChipStyle"
                 android:layout_width="wrap_content"
