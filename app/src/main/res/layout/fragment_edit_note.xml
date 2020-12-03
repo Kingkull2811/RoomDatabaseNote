@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Fragment.edit_note">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,6 +18,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:hint="Title"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/colorGray"
+            app:startIconTint="@color/black"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
@@ -31,6 +36,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtTitle"
                 android:layout_width="match_parent"
+                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:inputType="text|textMultiLine"
                 android:textSize="18sp" />
@@ -47,7 +53,11 @@
             app:layout_constraintStart_toStartOf="@id/layoutTitle"
             app:layout_constraintTop_toBottomOf="@id/layoutTitle"
             app:singleSelection="true">
-
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipHigh"
                 style="@style/customChipStyle"
@@ -69,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/low_priority" />
-
+            </LinearLayout>
 
         </com.google.android.material.chip.ChipGroup>
         <com.google.android.material.textfield.TextInputLayout
@@ -77,6 +87,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@color/colorGray"
+            app:startIconTint="@color/black"
             android:hint="Content"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
@@ -93,6 +107,7 @@
                 android:id="@+id/edtContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:inputType="text|textMultiLine"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
