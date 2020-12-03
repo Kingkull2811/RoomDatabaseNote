@@ -3,9 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="my_note">My Note</string>
-    <string name="high_priority">High Priority</string>
-    <string name="normal_priority">Normal Priority</string>
-    <string name="low_priority">Low Priority</string>
+    <string name="high_priority">High</string>
+    <string name="normal_priority">Normal</string>
+    <string name="low_priority">Low</string>
     <string-array name="listPriority">
         <item>New</item>
         <item>Low To High</item>

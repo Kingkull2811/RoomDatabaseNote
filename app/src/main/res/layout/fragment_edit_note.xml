@@ -41,8 +41,19 @@
                 android:inputType="text|textMultiLine"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
-
+        <TextView
+            android:id="@+id/tvPriority"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:text="Priority"
+            app:layout_constraintStart_toStartOf="@id/layoutTitle"
+            app:layout_constraintTop_toBottomOf="@id/layoutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <com.google.android.material.chip.ChipGroup
+            android:orientation="vertical"
             android:id="@+id/groupPriority"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,13 +62,8 @@
             app:selectionRequired="true"
             app:layout_constraintEnd_toEndOf="@id/layoutTitle"
             app:layout_constraintStart_toStartOf="@id/layoutTitle"
-            app:layout_constraintTop_toBottomOf="@id/layoutTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvPriority"
             app:singleSelection="true">
-            <LinearLayout
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipHigh"
                 style="@style/customChipStyle"
@@ -79,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/low_priority" />
-            </LinearLayout>
+           \
 
         </com.google.android.material.chip.ChipGroup>
         <com.google.android.material.textfield.TextInputLayout
